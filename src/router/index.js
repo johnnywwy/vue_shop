@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
+import Welcome from '../components/Welcome.vue'
+import Users from '../components/user/Users.vue'
 
 // 导入全局样式表
 import '../assets/css/global.css'
@@ -17,7 +19,18 @@ const router = new VueRouter({
     },
     {
       path: '/home',
-      component: Home
+      component: Home,
+      redirect: '/welcome',
+      children: [
+        {
+          path: '/welcome',
+          component: Welcome
+        },
+        {
+          path: '/users',
+          component: Users
+        }
+      ]
     }
   ]
 })
