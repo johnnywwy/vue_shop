@@ -25,7 +25,10 @@ import {
   Dialog,
   MessageBox,
   Tag,
-  Cascader
+  Cascader,
+  Alert,
+  Tabs,
+  TabPane
 } from 'element-ui'
 
 // 注册全局可用组件
@@ -53,6 +56,9 @@ Vue.use(Pagination)
 Vue.use(Dialog)
 Vue.use(Tag)
 Vue.use(Cascader)
+Vue.use(Alert)
+Vue.use(Tabs)
+Vue.use(TabPane)
 
 // 挂载Vue.prototype
 Vue.prototype.$message = Message
