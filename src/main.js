@@ -19,6 +19,10 @@ import 'quill/dist/quill.bubble.css' // for bubble theme
 
 // 导入axios
 import axios from 'axios'
+
+// 引入echarts
+import * as echarts from 'echarts'
+
 // 配置请求的根路径
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
 // 配置axios请求拦截器
@@ -47,6 +51,7 @@ Vue.filter('dataFormat', function(originVal) {
 })
 
 Vue.component('tree-table', TreeTable)
+Vue.prototype.$echarts = echarts
 
 // 将富文本编辑器，注册为全局可用的组件
 Vue.use(VueQuillEditor)
